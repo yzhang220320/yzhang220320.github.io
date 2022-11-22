@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<title>学生进出学校核验</title>
+<head>
+  <meta charset="utf-8">
+  <title>TinDog</title>
+
+ <script>
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "y+": this.getFullYear, //年
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds() //秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy/MM/dd hh:mm:ss   ');", 1000);
+    </script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(39,92,106);
+}
+ 
+.d1
+{
+    width: 700px;
+    height: 1180px;
+    background: rgb(216,216,214);
+    position:fixed;
+    left: 150px;
+    top: 100px;
+    border-radius: 50px;
+}
+
+.d2
+{
+    width: 800px;
+    height: 1100px;
+    background: white;
+    position:fixed;
+    left: 100px;
+    top: 135px;
+    border-radius: 50px;
+}
+
+.d3
+{
+    width: 300px;
+    height: 100px;
+    background: white;
+    position:fixed;
+    left: 400px;
+    top: 200px;
+    border-radius: 50px;
+    font-size: 70px;
+}
+
+.d4
+{
+    width: 300px;
+    height: 100px;
+    background: white;
+    position:fixed;
+    left: 360px;
+    top: 290px;
+    border-radius: 50px;
+    font-size: 50px;
+}
+.d5
+{
+    width: 360px;
+    height: 100px;
+    background: white;
+    position:fixed;
+    left: 360px;
+    top: 350px;
+    border-radius: 50px;
+    font-size: 40px;
+}
+.d6
+{
+    width: 330px;
+    height: 360px;
+    background: rgb(236,236,236);
+    position:fixed;
+    left: 340px;
+    top: 430px;
+    font-size: 40px;
+}
+.s1
+{
+    width: 330px;
+    height: 360px;
+    position:fixed;
+    left: 380px;
+    top: 530px;
+    font-size: 40px;
+}
+
+.sj
+{
+    width: 600px;
+    height: 360px;
+    position:fixed;
+    left: 270px;
+    top: 860px;
+    font-size: 50px;
+    font-weight:900;
+    font-family:"黑体";
+}
+.d7
+{
+    width: 810px;
+    height: 200px;
+    background: rgb(38,53,134);
+    position:fixed;
+    left: 95px;
+    top: 1035px;
+    border-radius: 20px;
+
+}
+.y1
+{
+  width: 80px;
+  height: 80px;
+  background-color: rgb(39,92,106);
+  position:fixed;
+  left: 65px;
+  top: 1000px;
+  border-radius: 100px;
+}
+.y2
+{
+  width: 80px;
+  height: 80px;
+  background-color: rgb(39,92,106);
+  position:fixed;
+  left: 855px;
+  top: 1000px;
+  border-radius: 100px;
+}
+.p
+{
+  position:fixed;
+    left: 380px;
+    top: 1080px;
+  font-size: 60px;
+  color: rgb(240,240,240);
+
+}
+.p1
+{
+  position:fixed;
+    left: 300px;
+    top: 1400px;
+  font-size: 36px;
+color: rgb(240,240,240);
+\
+    font-family:"黑体";
+}
+.p2
+{
+  position:fixed;
+    left: 300px;
+    top: 1470px;
+  font-size: 36px;
+color: rgb(240,240,240);
+
+    font-family:"黑体";
+}
+.p3
+{
+  position:fixed;
+    left: 650px;
+    top: 1430px;
+  font-size: 36px;
+color: rgb(240,240,240);
+\
+    font-family:"黑体";
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="d1"></div>
+<div class="d2"></div>
+<div class="d3">
+<b>张宇昂</b>
+</div>
+<div class="d4">2019052937</div>
+<div class="d5">化学与材料学院</div>
+<div class="d6"></div>
+<div class="d7"></div>
+<div class="y1"></div>
+<div class="y2"></div>
+<div class="p">予以通行</div>
+<div class="s1">扫码成功<br>图片加载失败</div>
+<div class="sj" id="dateTime"></div>
+<div class="p1">党 委 学 生 工 作 部</div>
+<div class="p2">网络与教育技术中心</div>
+<div class="p3">制</div>
+</body>
+
+</html>
